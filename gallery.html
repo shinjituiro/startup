@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Parallelism by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Gallery</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.gallery.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<div id="wrapper">
+
+			<!-- Header -->
+				<header id="sub_header" class="alt">
+					<a href="index.html" class="logo"><strong>dai</strong> <span>sotu mu shoku</span></a>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+			<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="products.html">Products</a></li>
+							<li><a href="news.html">News & Event</a></li>
+							<li><a href="recruit.html">Recruit</a></li>
+							<li><a href="forum.html">Forum</a></li>
+					</ul>
+					<ul class="actions vertical">
+						<li><a href="#" class="button special fit">Get Started</a></li>
+						<li><a href="#" class="button fit">Log In</a></li>
+					</ul>
+				</nav>
+
+			<div id="main">
+				<div id="reel">
+
+					<!-- Header Item -->
+
+						<div id="header" class="item" data-width="400">
+							<div class="inner">
+								<h1>Gallery</h1>
+								<p>Shinjituiro's Art Works<br>
+								from 2015 to 2016</p>
+							</div>
+						</div>
+
+					<!-- Thumb Items -->
+						<script>
+							var title = [
+										"未公開",
+										"DIMSS",
+										"Mel Maxwell -ONSHA-",
+										"Mel Maxwell -大戸屋しまほっけ定食-",
+										"シン・レガリア",
+										"鬼太郎村",
+										"Mel Maxwell -魔法少女-",
+										"ロボ・キイノ",
+										"暗黒単語ジェネレーター"
+										];
+							var width = [282,384,274,282,476,232,352,348];
+							for(var i = 8; i > 0; --i){
+								var num = i<10 ? '0'+i : i;
+								document.write('\
+									<article class="item thumb" data-width="'+width[i%8]+'">\
+										<h2>'+title[i]+'</h2>\
+										<a href="images/fulls/'+num+'.jpg" class="image"><img src="images/thumbs/'+num+'.jpg" alt=""></a>\
+									</article>\
+								');
+							}
+							for(var i = 16; i > 8; --i){
+								var num = "void";
+								document.write('\
+									<article class="item thumb" data-width="'+width[i%8]+'">\
+										<h2>'+title[0]+'</h2>\
+										<a href="images/fulls/'+num+'.jpg" class="image"><img src="images/thumbs/'+num+'.jpg" alt=""></a>\
+									</article>\
+								');
+							}
+						</script>
+				</div>
+			</div>
+
+			<div id="footer">
+				<div class="left">
+					<p>Free for personal and commercial use under the <a href="https://creativecommons.org/licenses/by/3.0/deed.ja" target="blank">Creative Commons Attribution</a> license.</p>
+				</div>
+				<div class="right">
+					<ul class="contact">
+						<li><a href="https://twitter.com/maigattu" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="http://mypage.syosetu.com/mypage/top/userid/631039/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="http://mypage.syosetu.com/mypage/top/userid/631039/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/shinjituiro" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="http://mypage.syosetu.com/mypage/top/userid/631039/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; 2016 <a href="https://twitter.com/maigattu">Shinjituiro</a>.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.gallery.js"></script>
+
+	</body>
+</html>
