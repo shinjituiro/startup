@@ -58,36 +58,51 @@
 
 					<!-- Thumb Items -->
 						<script>
-							var title = [
-										"未公開",
-										"DIMSS",
-										"Mel Maxwell -ONSHA-",
-										"Mel Maxwell -大戸屋しまほっけ定食-",
-										"シン・レガリア",
-										"鬼太郎村",
-										"Mel Maxwell -魔法少女-",
-										"ロボ・キイノ",
-										"暗黒単語ジェネレーター"
-										];
-							var width = [282,384,274,282,476,232,352,348];
-							for(var i = 8; i > 0; --i){
-								var num = i<10 ? '0'+i : i;
+							const imgs = [
+								{ title: "tomori_00", src: "16" },	
+								{ title: "tomori_01 - 04", src: "09" },
+								{ title: "tomori_05 - 09", src: "10" },
+								{ title: "tomori_10 - 12", src: "11" },
+								{ title: "tomori_13 - 16", src: "12" },
+								{ title: "tomori_17", src: "13" },
+								{ title: "tomori_18 - 21", src: "14" },
+								{ title: "tomori_22", src: "15" },
+								{ title: "tomori_23", src: "17" },
+								{ title: "tomori_beer", src: "29" },
+								{ title: "表紙ラフ", src: "24" },
+								{ title: "表紙塗り", src: "25" },
+								{ title: "ベンゼン", src: "19" },
+								{ title: "shadow", src: "20" },
+								{ title: "shadows", src: "21" },
+								{ title: "man", src: "22" },
+								{ title: "ABARA", src: "23" },
+								{ title: "非公開", src: "void" },
+								{ title: "漫画「炎上ダービー2016」（続きはpixivで）", src: "18" },
+								{ title: "自己紹介", src: "26" },
+								{ title: "ガ", src: "28" },
+								{ title: "are am i are ファンアート", src: "30" },
+								{ title: "DIMSS", src: "01" },
+								{ title: "Mel Maxwell -ONSHA-", src: "02" },
+								{ title: "Mel Maxwell -大戸屋しまほっけ定食-", src: "03" },
+								{ title: "Mel Maxwell -魔法少女-", src: "06" },
+								{ title: "Mel Maxwell -SEXY-", src: "27" },
+								{ title: "シン・レガリア", src: "04" },
+								{ title: "鬼太郎村", src: "05" },
+								{ title: "ロボ・キイノ", src: "07" },
+								{ title: "暗黒単語ジェネレーター", src: "08" },
+							];
+							[...Array(5)].map(() => imgs.push({ title: "非公開", src: "void" }));
+							const width = [ 476, 282, 384, 274, 282, 232, 352, 348 ];
+							imgs.forEach( ( img, index ) => {
 								document.write('\
-									<article class="item thumb" data-width="'+width[i%8]+'">\
-										<h2>'+title[i]+'</h2>\
-										<a href="images/fulls/'+num+'.jpg" class="image"><img src="images/thumbs/'+num+'.jpg" alt=""></a>\
+									<article class="item thumb" data-width="' + width[ index%8 ] + '">\
+										<h2>' + img.title + '</h2>\
+										<a href="images/fulls/' + img.src + '.jpg" class="image">\
+											<img src="images/fulls/' + img.src + '.jpg" alt="">\
+										</a>\
 									</article>\
 								');
-							}
-							for(var i = 16; i > 8; --i){
-								var num = "void";
-								document.write('\
-									<article class="item thumb" data-width="'+width[i%8]+'">\
-										<h2>'+title[0]+'</h2>\
-										<a href="images/fulls/'+num+'.jpg" class="image"><img src="images/thumbs/'+num+'.jpg" alt=""></a>\
-									</article>\
-								');
-							}
+							});
 						</script>
 				</div>
 			</div>
